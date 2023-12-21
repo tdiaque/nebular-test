@@ -1,0 +1,8 @@
+---
+version: '3.4'
+services:
+  dev-container:
+    build: .
+    network_mode: "host"
+    volumes:
+      - ./:/workspaces/drt

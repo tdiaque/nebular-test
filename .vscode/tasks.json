@@ -3,6 +3,14 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "ng serve",
+      "type": "shell",
+      "command": "ng serve",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+    },
+    {
       "type": "npm",
       "script": "start",
       "isBackground": true,
@@ -37,6 +45,19 @@
           }
         }
       }
+    },
+    {
+      "label": "stop all",
+      "command": "echo ${input:terminate}",
+      "type": "shell"
+    },
+  ],
+  "inputs": [
+    {
+      "id": "terminate",
+      "type": "command",
+      "command": "workbench.action.tasks.terminate",
+      "args": "terminateAll"
     }
   ]
 }
